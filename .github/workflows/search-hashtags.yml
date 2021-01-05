@@ -23,7 +23,7 @@ jobs:
            mst: ${{ secrets.MST }} 
         run: python search-hashtags.py
       - name: commit changes
-         run |
+         run: |
             git config --global user.name 'Colin G. Wilson'
             git config --global user.email 'colingwilson7@gmail.com'
             git commit -am "Automated (see /.github/workflows/search-hashtags.yml)"
