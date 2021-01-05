@@ -30,5 +30,5 @@ with open("hashtag_search_results.json") as data_file:
 results = past_results + results
 
 with open('hashtag_search_results.json', 'w') as outfile:
-    json.dump(results, outfile)
+    json.dump(results, outfile, indent=4)
     
