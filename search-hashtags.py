@@ -8,7 +8,7 @@ client = Parler(mst, jst)
 
 import json
 
-with open("hashtags_2.json", "r") as read_file:
+with open("hashtags.json", "r") as read_file:
     data = json.load(read_file)
 
 print(data)
