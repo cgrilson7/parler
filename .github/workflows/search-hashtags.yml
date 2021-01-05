@@ -2,7 +2,7 @@ name: search-hashtags
 
 on: 
    schedule:
-   - cron: "* * * * *” #runs every minute
+      - cron: "*/10 * * * *” #runs every minute
 
 jobs:
    build:
