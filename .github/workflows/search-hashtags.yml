@@ -16,4 +16,8 @@ jobs:
         with:
           python-version: 3.8 #install the python needed
       - name: execute py script # run the run.py to get the latest data
-        run: python -c "import sys; print(sys.version)"
+        env:
+           jst: ${{ secrets.JST }}
+           mst: ${{ secrets.MST }} 
+        run: python -c "import os; print(os.environ['jst'])"
+        
