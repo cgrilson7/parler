@@ -20,9 +20,10 @@ jobs:
             python -m pip install --upgrade pip
             pip install -r requirements.txt
       - name: execute py script # run the run.py to get the latest data
-         run: |
-            python -c "import os; print(os.environ['jst'])"
-         env:
+        env:
             jst: ${{ secrets.JST }}
             mst: ${{ secrets.MST }}
+         run: |
+            python -c "import os; print(os.environ['jst'])"
+
        
