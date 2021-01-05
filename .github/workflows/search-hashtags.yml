@@ -1,8 +1,8 @@
 name: search-hashtags
 
-on: [push]
-#   schedule:
-#      - cron: "* * * * *” #runs every minute
+on: 
+   schedule:
+   - cron: "* * * * *” #runs every minute
 
 jobs:
    build:
