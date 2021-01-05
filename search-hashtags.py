@@ -1,11 +1,11 @@
 import os
 from parler import Parler
 
-jst = os.environ['JST']
-mst = os.environ['MST']
+jst = os.environ['jst']
+mst = os.environ['mst']
 
 print(jst)
 
 client = Parler(mst, jst)
 
-print(client.searchHashtags())
+print(client.hashtagSearch('stopthesteal'))
