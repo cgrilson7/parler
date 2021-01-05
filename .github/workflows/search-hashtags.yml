@@ -3,7 +3,7 @@ name: search-hashtags
 on: 
    push:
    schedule:
-      - cron: '*/10 * * * *'
+      - cron: '*/30 * * * *'
 
 jobs:
    build:
@@ -22,4 +22,9 @@ jobs:
            jst: ${{ secrets.JST }}
            mst: ${{ secrets.MST }} 
         run: python search-hashtags.py
-        
+      - name: commit changes
+         run |
+            git config --global user.name 'Colin G. Wilson'
+            git config --global user.email 'colingwilson7@gmail.com'
+            git commit -am "Automated (see /.github/workflows/search-hashtags.yml)"
+            git push
