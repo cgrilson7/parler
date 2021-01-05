@@ -21,4 +21,4 @@ jobs:
         env:
           jst: ${{ secrets.JST }}
           mst: ${{ secrets.MST }}
-       run: python -c "import os; print(os.environ['jst'])"
+       run: echo $jst
