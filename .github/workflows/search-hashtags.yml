@@ -1,6 +1,7 @@
 name: search-hashtags
 
 on: 
+   push:
    schedule:
       - cron: "*/10 * * * *” #runs every minute
 
