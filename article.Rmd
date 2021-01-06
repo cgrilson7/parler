@@ -1,0 +1,19 @@
+---
+title: "article"
+author: "Colin G. Wilson"
+date: "1/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+library(jsonlite)
+library(dplyr)
+```
+
+```{r}
+df <- fromJSON("hashtag_search_results.json") %>%
+  select(tags, time) %>% 
+  as_tibble() %>% 
+  unnest(cols = tags)
+```
