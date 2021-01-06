@@ -20,6 +20,7 @@ results = []
 for hashtag in data['hashtags']:
     current = str(client.hashtagSearch(hashtag))
     current_eval = ast.literal_eval(current)
+    current_eval['hashtag_searched'] = hashtag
     current_eval['time'] = time.time()
     results.append(current_eval)
     time.sleep(2)
