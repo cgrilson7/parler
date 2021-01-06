@@ -1,7 +1,6 @@
 name: search-hashtags
 
 on: 
-   push:
    schedule:
       - cron: '*/5 * * * *'
 
@@ -17,7 +16,9 @@ jobs:
           python-version: 3.8
       - name: install dependencies
         run: pip install parler
-      - name: execute py script
+      - name: pull changes
+        run: git pull
+      - name: execute script
         env:
            jst: ${{ secrets.JST }}
            mst: ${{ secrets.MST }} 
