@@ -3,7 +3,7 @@ name: search-hashtags
 on: 
    push:
    schedule:
-      - cron: '*/5 * * * *'
+      - cron: '*/30 * * * *'
 
 jobs:
    build:
